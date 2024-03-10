@@ -10,7 +10,7 @@ model += pulp.lpSum([lemonade, fruit_juice]), "Total_Products"
 model += 2 * lemonade + fruit_juice <= 100, "water_constraint"
 model += 1 * lemonade <= 50, "sugar_constraint"
 model += 1 * lemonade <= 30, "lemon_juice_constraint"
-model += 2 * fruit_juice + 1 * lemonade <= 40, "fruit_puree_constraint"
+model += 2 * fruit_juice <= 40, "fruit_puree_constraint"
 
 model.solve()
 
